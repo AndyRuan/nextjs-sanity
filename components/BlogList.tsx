@@ -20,7 +20,7 @@ function BlogList({ posts }: Props) {
 
         {posts.map(post => (
 
-          <ClientSideRoute key={post._id} route={`/post/${post._id ? post._id : ''}`  }>
+          <ClientSideRoute key={post._id} route={`/post/${post.slug ? post.slug.current : ''}`  }>
 
 
             <div key={post._id} className="group cursor-pointer flex-col" >
