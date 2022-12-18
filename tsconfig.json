@@ -19,7 +19,10 @@
     "jsx": "preserve",
     "incremental": true,
     "types": [
-      "@heroicons/react/24/solid"
+      "@heroicons/react/24/solid",
+      "next-sanity",
+      "next/headers"
+      
     ],
     "baseUrl": ".",
     "paths": {

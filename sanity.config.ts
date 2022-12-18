@@ -1,10 +1,11 @@
 import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
 import { visionTool } from '@sanity/vision'
-import { schemaTypes } from './schemas'
 import { myTheme } from '@/theme'
 import StudioNavBar from '@/components/StudioNavBar'
 import Logo from './components/Logo'
+import { getDefaulDocumentNode } from './styles/structure'
+import { schemaTypes } from './schemas'
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET_ID!
@@ -16,7 +17,9 @@ export default defineConfig({
   projectId,
   dataset,
   theme: myTheme,
-  plugins: [deskTool(), visionTool()],
+  plugins: [deskTool({
+    defaultDocumentNode: getDefaulDocumentNode
+  }), visionTool()],
 
   schema: {
     types: schemaTypes,
