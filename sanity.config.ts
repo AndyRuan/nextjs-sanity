@@ -24,10 +24,10 @@ export default defineConfig({
   schema: {
     types: schemaTypes,
   },
-  studio:{
-    components:{
-      logo:Logo,
-      navbar:StudioNavBar
+  studio: {
+    components: {
+      logo: Logo,
+      navbar: StudioNavBar
     }
   }
 })

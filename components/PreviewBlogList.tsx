@@ -12,7 +12,6 @@ function PreviewBlogList({query}:Props) {
 
 const posts = usePreview(null, query)
 
-console.log('loading posts',posts)
 
 return <BlogList posts={posts}></BlogList>
 

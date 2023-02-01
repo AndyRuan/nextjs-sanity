@@ -39,11 +39,12 @@ export default async function HomePage() {
 
 
   const posts = await client.fetch(query)
-  console.log(posts)
+
 
   return (
     <div>
       <BlogList posts={posts}></BlogList>
+      
     </div>
   )
 

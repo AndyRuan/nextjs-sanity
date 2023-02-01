@@ -39,7 +39,7 @@ async function Post({ params: { slug } }: Props) {
   `
 
   const post: Post = await client.fetch(query, { slug })
-  console.log(post)
+
 
 
   return (
